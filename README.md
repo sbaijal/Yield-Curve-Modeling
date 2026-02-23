@@ -39,3 +39,18 @@ $$y(\tau) = \beta_0 + \beta_1 \cdot \frac{1 - e^{-\lambda\tau}}{\lambda\tau} + \
 
 **Fitting strategy:** For each candidate λ on a grid [0.01, 5.0], the loadings are fixed and β₀, β₁, β₂ are estimated via closed-form OLS. The λ that minimises SSE is selected.
 
+### 2. Cubic Spline Model
+
+A natural cubic spline fits a piecewise cubic polynomial through each pair of adjacent knots {τ₁, ..., τₙ}, subject to:
+- **Continuity** of y, y', y'' at interior knots  
+- **Natural boundary conditions**: y''(τ₁) = y''(τₙ) = 0  
+
+This yields a system of N linear equations solved in closed form — no numerical optimisation required.
+
+**Two variants are implemented:**
+
+| Variant | Description | Use Case |
+|---|---|---|
+| **Interpolating** | Passes exactly through every observed yield | Exact pricing, CSA discounting |
+| **Smoothing** | Penalised spline; trades fit for smoothness | Noisy data |
+
