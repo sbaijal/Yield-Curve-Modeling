@@ -24,18 +24,19 @@ To form a curve from discontinuous points we use two difeerent methodologies :
 1. Nelson-Siegel factor model
 2. Cubic Spline Interpolation
 
-### 1. Nelson-Siegel model
+### 1. Nelson-Siegel Model
 
 The Nelson-Siegel (1987) model represents the yield curve as a linear combination of three *factor loadings*:
 
 $$y(\tau) = \beta_0 + \beta_1 \cdot \frac{1 - e^{-\lambda\tau}}{\lambda\tau} + \beta_2 \cdot \left[\frac{1 - e^{-\lambda\tau}}{\lambda\tau} - e^{-\lambda\tau}\right]$$
 
-| Parameter | Economic Interpretation |
-|---|---|
-| **β₀** | The level - Long-run neutral rate |
-| **β₁** | The Slope - Monetary policy stance |
-| **β₂** | The Curvature - Medium-term rate expectations|
-| **λ** | Decay rate — controls where hump peaks (τ* = 1/λ) |
+#### Fitted Parameters (US Treasury Curve — 2024-09-13)
+| Parameter | Value | Interpretation |
+|---|---|---|
+| **β₀** | 3.618 |The level - Long-run neutral rate |
+| **β₁** | 2.0137 |The Slope - Monetary policy stance |
+| **β₂** | -0.7415 |The Curvature - Medium-term rate expectations|
+| **λ** | 3.2945 |Decay rate — controls where hump peaks (τ* = 1/λ) = 0.3039|
 
 **Fitting strategy:** For each candidate λ on a grid [0.01, 5.0], the loadings are fixed and β₀, β₁, β₂ are estimated via closed-form OLS. The λ that minimises SSE is selected.
 
