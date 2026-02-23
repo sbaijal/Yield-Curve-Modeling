@@ -31,7 +31,7 @@ The Nelson-Siegel (1987) model represents the yield curve as a linear combinatio
 $$y(\tau) = \beta_0 + \beta_1 \cdot \frac{1 - e^{-\lambda\tau}}{\lambda\tau} + \beta_2 \cdot \left[\frac{1 - e^{-\lambda\tau}}{\lambda\tau} - e^{-\lambda\tau}\right]$$
 
 | Parameter | Economic Interpretation |
-|---|---|---|
+|---|---|
 | **β₀** | The level |
 | **β₁** | The Slope |
 | **β₂** | The Curvature |
