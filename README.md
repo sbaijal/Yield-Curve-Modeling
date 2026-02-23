@@ -33,10 +33,10 @@ $$y(\tau) = \beta_0 + \beta_1 \cdot \frac{1 - e^{-\lambda\tau}}{\lambda\tau} + \
 #### Fitted Parameters (US Treasury Curve — 2024-09-13)
 | Parameter | Value | Interpretation |
 |---|---|---|
-| **β₀** | 3.618 |The level - Long-run neutral rate |
-| **β₁** | 2.0137 |The Slope - Monetary policy stance |
-| **β₂** | -0.7415 |The Curvature - Medium-term rate expectations|
-| **λ** | 3.2945 |Decay rate — controls where hump peaks (τ* = 1/λ) = 0.3039|
+| **β₀** | 3.618% | The level - Long-run neutral rate |
+| **β₁** | 2.0137% | The Slope - Monetary policy stance |
+| **β₂** | -0.7415% | The Curvature - Medium-term rate expectations|
+| **λ** | 3.2945 | Decay rate — controls where hump peaks (τ* = 1/λ) = 0.3039|
 
 **Fitting strategy:** For each candidate λ on a grid [0.01, 5.0], the loadings are fixed and β₀, β₁, β₂ are estimated via closed-form OLS. The λ that minimises SSE is selected.
 
