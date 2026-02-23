@@ -55,3 +55,13 @@ This yields a system of N linear equations solved in closed form — no numerica
 | **Interpolating** | Passes exactly through every observed yield | Exact pricing, CSA discounting |
 | **Smoothing** | Penalised spline; trades fit for smoothness | Noisy data |
 
+## Comparitive Study
+
+| Metric        | Nelson-Siegel    | Cubic Spline (Interp) | Cubic Spline (Smooth) |
+|---------------|------------------|-----------------------|-----------------------|
+| RMSE          | ~24 bp           | ~0 bp                 | ~8.5 bp               |
+| MAE           | ~20.73 bp        | ~0 bp                 | ~7.7 bp               |
+| Parameters    | 4                | N (one per knot)      | N + penalty           |
+| Extrapolation | Converges to β₀  | Diverges beyond data  | Moderate              |
+| Forward Rates | Smooth, analytic | Can oscillate         | Smooth                |
+
