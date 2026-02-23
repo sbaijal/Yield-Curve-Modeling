@@ -50,7 +50,11 @@ trades fit for smoothness via a penalty parameter.
 | **Interpolating** | Passes exactly through every observed yield | Exact pricing, CSA discounting |
 | **Smoothing** | Penalised spline; trades fit for smoothness | Noisy data |
 
-## Comparitive Study
+## Results
+
+Nelson-Siegel fits the curve with ~24bp RMSE using only 4 parameters. 
+The interpolating spline fits exactly by construction but produces 
+unstable forward rates. The smoothing spline sits between the two.
 
 | Metric        | Nelson-Siegel    | Cubic Spline (Interp) | Cubic Spline (Smooth) |
 |---------------|------------------|-----------------------|-----------------------|
@@ -60,3 +64,15 @@ trades fit for smoothness via a penalty parameter.
 | Extrapolation | Converges to β₀  | Diverges beyond data  | Moderate              |
 | Forward Rates | Smooth, analytic | Can oscillate         | Smooth                |
 
+Nelson-Siegel is used for all downstream analysis in this project 
+given its stable forward rates and forecastable parameter structure.
+
+## Data
+
+US Treasury yields downloaded from FRED. See `data/README.md`
+for download instructions.
+
+## How to Run
+
+pip install -r requirements.txt
+jupyter notebook notebooks/yield_curve_fitting.ipynb
