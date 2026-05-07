@@ -8,11 +8,19 @@ observable at a discrete set of maturities — the tenors at which
 benchmark bonds are actively traded. This leaves the curve discontinuous 
 by nature, with no direct observation between traded maturities.
 
-The objective of this project is to construct a smooth, continuous curve 
-from these discrete observations — enabling reliable yield estimation at 
-any maturity on a given date. This project fits a continuous curve through those 
-discrete points using two methods — Nelson-Siegel and Cubic Spline 
-— and compares how each performs.
+The objective of this project is 
+1. To construct a smooth, continuous curve from these discrete observations — 
+enabling reliable yield estimation at any maturity on a given date. 
+
+2. To provide a detailed risk decomposition of the portfolio
+
+3. Stress test P&L under different scenarios.
+
+The project fits a continuous curve through those discrete points using 
+two methods — Nelson-Siegel and Cubic Spline — and compares how each performs.
+
+Furthermore, the project evaluated risk measures such as Modified Duration, DV01, 
+Key Rate Duration and parallel and non parallel shocks to stress test.
 
 ## Yield Curve Fitting Methods
 
