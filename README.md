@@ -58,7 +58,17 @@ trades fit for smoothness via a penalty parameter.
 | **Interpolating** | Passes exactly through every observed yield | Exact pricing, CSA discounting |
 | **Smoothing** | Penalised spline; trades fit for smoothness | Noisy data |
 
+## Portfolio
 
+We have undertook a portfolio of 4 different US Treasury bonds as defined in the **config.py** file.
+
+**Portfolio**
+| Bond Name       | Coupon Rate | Maturity(year) | Face Value($m)        |
+|-----------------|-------------|----------------|-----------------------|
+| UST 4.750% 2026 | 4.750       | 2.0            | 50                    |
+| UST 3.875% 2029 | 3.875       | 5.0            | 120                   |
+| UST 3.875% 2034 | 3.875       | 10.0           | 90                    |
+| UST 4.250% 2054 | 4.250       | 30.0           | 40                    |
 
 ## Results
 
