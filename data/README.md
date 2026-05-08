@@ -35,7 +35,7 @@ automatically. Get a free API key at:
 
 https://fred.stlouisfed.org/docs/api/api_key.html
 
-Then set your key at the top of the notebook:
+Then set your key in `config.py`:
 ```python
 FRED_API_KEY = "your_key_here"
 ```
