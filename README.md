@@ -60,7 +60,10 @@ trades fit for smoothness via a penalty parameter.
 
 ## Portfolio
 
-We have undertook a portfolio of 4 different US Treasury bonds as defined in the **config.py** file.
+The portfolio comprises four US Treasury bonds spanning 
+the 2 to 30 year maturity spectrum, with positions 
+specified in `config.py`. All risk metrics are computed 
+as of the valuation date defined in that file.
 
 **Portfolio**
 | Bond Name       | Coupon Rate | Maturity(year) | Face Value($m)        |
@@ -109,3 +112,4 @@ for download instructions.
 pip install -r requirements.txt
 
 jupyter notebook notebooks/yield_curve_fitting.ipynb
+jupyter notebook notebooks/yield-curve-risk_management.ipynb
