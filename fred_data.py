@@ -1,3 +1,9 @@
+'''
+fred_data.py module to fetch US Treasury yield data from the FRED API.
+The main function is load_fred_data, which retrieves the yield data for the specified series IDs and returns it as a pandas DataFrame with maturities as columns.
+The get_yield_data function is a helper function that fetches the data for a single series ID, given the observation start and end dates defined in the config.
+'''
+
 import numpy as np
 import pandas as pd
 from fredapi import Fred

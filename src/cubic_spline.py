@@ -1,3 +1,10 @@
+'''
+CubicSpline.py class to fit a cubic spline to a set of bond yields and maturities.
+The main function is cs_interp_fit, which takes in arrays of maturities and bond yields, and returns the fitted cubic spline.
+The cs_smooth_fit function fits a smooth cubic spline to the data.
+The cs_forward function computes the forward rates implied by the cubic spline.
+'''
+
 import numpy as np
 from scipy.interpolate import CubicSpline, UnivariateSpline
 

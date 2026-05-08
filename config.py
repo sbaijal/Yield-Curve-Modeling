@@ -1,3 +1,13 @@
+'''
+Config.py contains all the configuration parameters for the yield curve modeling and risk management project. This includes:
+- Observation and valuation dates for the bond yield data.
+- The series IDs for the US Treasury yields from FRED.
+- The portfolio of bonds being analyzed, with their names, coupons, maturities, and face values.
+- The FRED API key for data retrieval.
+- Parameters for the stress testing, including parallel shock magnitudes.
+- An array of maturities corresponding to the bond yields being analyzed.
+'''
+
 import numpy as np
 OBSERVATION_START = "1975-01-01"
 OBSERVATION_END = "2026-02-01"
@@ -17,7 +27,5 @@ FRED_API_KEY = "3a4a21640f653124f86acdea283a9768"
 
 # Stress test parameters
 PARALLEL_SHOCKS = [-300, -200, -100, +100, +200, +300]
-VAR_CONFIDENCE  = [0.95, 0.99]
-LOOKBACK_DAYS   = 252
 
 maturities = np.array([0.083, 0.25, 0.5, 1.0, 2.0, 3.0, 5.0, 7.0, 10.0, 20.0, 30.0])

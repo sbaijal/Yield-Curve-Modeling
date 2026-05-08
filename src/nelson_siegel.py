@@ -1,3 +1,10 @@
+'''
+Nelson_siegel.py class to fit the Nelson-Siegel model to a set of bond yields and maturities.
+The main function is fit_ns, which takes in arrays of maturities and bond yields, and returns the fitted parameters (b0, b1, b2, lam) along with RMSE and MAE of the fit.
+The ns_loadings function computes the three factor loadings for the Nelson-Siegel model based on the input maturities and lambda parameter.
+The ns_yields function calculates the fitted yields for given parameters and maturities, while the ns_forward function computes the forward rates implied by the Nelson-Siegel parameters.
+The fit_ns function performs a grid search over possible lambda values to find the best fit to the observed bond yields, using least squares to solve for the beta parameters at each lambda.
+'''
 import numpy as np
 from scipy.linalg import lstsq
 
