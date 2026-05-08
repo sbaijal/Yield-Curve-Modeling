@@ -19,7 +19,7 @@ enabling reliable yield estimation at any maturity on a given date.
 The project fits a continuous curve through those discrete points using 
 two methods — Nelson-Siegel and Cubic Spline — and compares how each performs.
 
-Furthermore, the project evaluated risk measures such as Modified Duration, DV01, 
+Furthermore, the project evaluates risk measures such as Modified Duration, DV01, 
 Key Rate Duration and parallel and non parallel shocks to stress test.
 
 ## Yield Curve Fitting Methods
@@ -57,6 +57,16 @@ trades fit for smoothness via a penalty parameter.
 |---|---|---|
 | **Interpolating** | Passes exactly through every observed yield | Exact pricing, CSA discounting |
 | **Smoothing** | Penalised spline; trades fit for smoothness | Noisy data |
+
+## Risk Metrics
+| Metric | Portfolio Value | Interpretation |
+|---|---|---|
+| Market Value | ~ $306.8m | Future cash flows discounted |
+| Modified Duration| ~ 7.05yr | Change in price for a 1% rise in yield |
+| Portfolio DV01 | ~ $216382.60 | change in the *market value* of a position for a 1 basis point (0.01%) parallel rise in the yield curve|
+| +100bp P&L| ~ $-20.68m | Parallel shock of 100 basis point|
+| +200bp P&L| ~ $-38.96m| Parallel shock of 200 basis point|
+| Key Rate Duration| ~ 10-30yr | which part of the yield curve poses the greatest risk to my portfolio?|
 
 ## Results
 
