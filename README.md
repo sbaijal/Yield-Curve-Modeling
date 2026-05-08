@@ -58,15 +58,7 @@ trades fit for smoothness via a penalty parameter.
 | **Interpolating** | Passes exactly through every observed yield | Exact pricing, CSA discounting |
 | **Smoothing** | Penalised spline; trades fit for smoothness | Noisy data |
 
-## Risk Metrics
-| Metric | Portfolio Value | Interpretation |
-|---|---|---|
-| Market Value | ~ $306.8m | Future cash flows discounted |
-| Modified Duration| ~ 7.05yr | Change in price for a 1% rise in yield |
-| Portfolio DV01 | ~ $216382.60 | change in the *market value* of a position for a 1 basis point (0.01%) parallel rise in the yield curve|
-| +100bp P&L| ~ $-20.68m | Parallel shock of 100 basis point|
-| +200bp P&L| ~ $-38.96m| Parallel shock of 200 basis point|
-| Key Rate Duration| ~ 10-30yr | which part of the yield curve poses the greatest risk to my portfolio?|
+
 
 ## Results
 
@@ -84,6 +76,18 @@ unstable forward rates. The smoothing spline sits between the two.
 
 Nelson-Siegel is used for all downstream analysis in this project 
 given its stable forward rates and forecastable parameter structure.
+
+Using Nelson Siegel curve on a valuation date of 24th September, 2024 we obtain the following risk metrics.
+
+**Risk Metrics**
+| Metric | Portfolio Value | Interpretation |
+|---|---|---|
+| Market Value | ~ $306.8m | Future cash flows discounted |
+| Modified Duration| ~ 7.05yr | Change in price for a 1% rise in yield |
+| Portfolio DV01 | ~ $216382.60 | Change in the *market value* of a position for a 1 basis point (0.01%) parallel rise in the yield curve|
+| +100bp P&L| ~ $-20.68m | Parallel shock of 100 basis point|
+| +200bp P&L| ~ $-38.96m| Parallel shock of 200 basis point|
+| Key Rate Duration| ~ 10-30yr | Which part of the yield curve poses the greatest risk to my portfolio?|
 
 ## Data
 
